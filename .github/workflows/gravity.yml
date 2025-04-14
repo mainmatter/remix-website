@@ -25,6 +25,6 @@ jobs:
         run: npm run build
 
       - name: Run Gravity
-        run: npx @gravityci/cli "build/**/*" --fingerprint "^.+(\-[0-9A-Za-z_\-]{8})\..+"
+        run: npx @gravityci/cli "build/**/*" --fingerprint "^.+(\-[0-9A-Za-z_\-]{8})\..+" --js-chunks "assets/.+\.js"
         env:
           GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}
