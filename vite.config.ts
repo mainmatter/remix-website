@@ -11,6 +11,9 @@ export default defineConfig({
         chunkFileNames: () => {
           return "chunks/[name]-[hash].js";
         },
+        entryFileNames() {
+          return "chunks/[name]-[hash].js";
+        },
       },
     },
   },
