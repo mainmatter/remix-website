@@ -6,6 +6,16 @@ import arraybuffer from "vite-plugin-arraybuffer";
 export default defineConfig({
   build: {
     sourcemap: true,
+    rollupOptions: {
+      output: {
+        chunkFileNames: () => {
+          return "[name]-[hash]/chunk.js";
+        },
+        entryFileNames() {
+          return "[name]-[hash]/entry.js";
+        },
+      },
+    },
   },
   ssr: {
     noExternal: ["@docsearch/react"],
