@@ -28,3 +28,4 @@ jobs:
         run: npx @gravityci/cli "build/**/*" --fingerprint "^.+(\-[0-9A-Za-z_\-]{8})\..+" --js-chunks "assets/.+\.js"
         env:
           GRAVITY_TOKEN: ${{ secrets.GRAVITY_TOKEN }}
+          GRAVITY_HOST: ${{ vars.GRAVITY_HOST }}
